@@ -14,6 +14,9 @@ public:
           std::any literal,
           uint32_t line) : type(type), lexeme(lexeme), literal(literal), line(line) {}
 
+    std::string Lexeme() {
+        return this->lexeme;
+    }
     std::string toString() {
         static char buff[1024];
         sprintf(buff,"type: [%s], lexeme: [%s], literal: [%s]", std::to_string(type).c_str(), lexeme.c_str(), literal_to_string().c_str());
