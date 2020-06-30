@@ -49,12 +49,12 @@ struct Grouping : public Expr {
 };
 
 struct Literal : public Expr {
-    Literal(double literal) {
+    Literal(std::any literal) {
         this->literal = literal;
     }
 
     virtual std::string accept(ExprVisitor* visitor) final;
 
-    double literal;
+    std::any literal;
 };
 

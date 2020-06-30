@@ -42,7 +42,7 @@ public:
         return parenthesize("grouping", {expr->expr});
     }
     virtual std::string visit(Literal* expr) final {
-        return std::to_string(expr->literal);
+        return "literial";
 //        parenthesize("Literal", expr->literal);
     }
 };

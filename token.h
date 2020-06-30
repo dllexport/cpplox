@@ -23,6 +23,14 @@ public:
         return std::string(buff);
     }
 
+    TokenType Type() {
+        return this->type;
+    }
+
+    std::any Literal() {
+        return literal;
+    }
+
 private:
     TokenType type;
     std::string lexeme;
